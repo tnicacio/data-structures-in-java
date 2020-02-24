@@ -20,7 +20,6 @@ public class Ordenacao extends OperacoesOrdenacao{
             }
         }
     }
-
    
     public static void quickSort(int[] v) {
         int a = 0;
