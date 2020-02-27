@@ -38,6 +38,14 @@ public class OperacoesOrdenacao {
         v[j] = temp;
     }
 
+    protected static void trocaRecursiva(int[] v, int j, int i) {
+        if (j == i) {return;}
+        if (v[j] > v[j+1]) {
+            troca(v,j,j+1);
+        }
+        trocaRecursiva(v, j+1, i);
+    }
+
     protected static int particiona(int[] v, int a, int b) {
         int x = v[a];
         while (a < b) {
