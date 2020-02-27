@@ -20,6 +20,25 @@ public class Ordenacao extends OperacoesOrdenacao{
             }
         }
     }
+    
+    public static void bubbleSortRecursive(int[] v) {
+        bubbleSortRecursive(v,v.length-1);
+    }
+    
+    public static void bubbleSortRecursive(int[] v, int n) {
+        if (n > 0){
+            trocaRecursiva(v,0,n);
+            bubbleSortRecursive(v, n-1);
+        }
+    }
+    
+    public static void trocaRecursiva(int[] v, int j, int i) {
+        if (j == i) {return;}
+        if (v[j] > v[j+1]) {
+            troca(v,j,j+1);
+        }
+        trocaRecursiva(v, j+1, i);
+    }
    
     public static void quickSort(int[] v) {
         int a = 0;
@@ -28,9 +47,7 @@ public class Ordenacao extends OperacoesOrdenacao{
     }
 
     public static void quickSort(int[] v, int a, int b) {
-        if (a >= b) {
-            return;
-        }
+        if (a >= b) {return;}
         int indicePivo = particiona(v, a, b);
         quickSort(v, a, indicePivo);
         quickSort(v, indicePivo + 1, b);
