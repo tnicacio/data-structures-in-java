@@ -5,7 +5,7 @@ package ordenacao;
  * @author tnica
  */
 public class Ordenacao extends OperacoesOrdenacao{    
-    
+
     public static void bubbleSort(int[] v) {
         for (int i = v.length - 1; i >= 0; i--) {
             for (int j = 0; j < i; j++) {
@@ -15,6 +15,7 @@ public class Ordenacao extends OperacoesOrdenacao{
             }
         }
     }
+<<<<<<< Updated upstream
     
     public static void bubbleSortRecursive(int[] v) {
         bubbleSortRecursive(v,v.length-1);
@@ -27,6 +28,9 @@ public class Ordenacao extends OperacoesOrdenacao{
         }
     }
       
+=======
+
+>>>>>>> Stashed changes
     public static void quickSort(int[] v) {
         int a = 0;
         int b = v.length - 1;

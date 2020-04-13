@@ -24,8 +24,8 @@ public class TesteOrdenacao {
 
         for (int i = 0; i < repeticoes; i++) {
 
-            for (int j = BUBBLE; j <= MERGE; j++) {
-                vetor[j] = OperacoesOrdenacao.criaVetorEmbaralhado(tamanhoVetor);
+            for (int j = BUBBLE; j <= MERGE; j++) {                
+                vetor[j] = OperacoesOrdenacao.criaVetorEmbaralhado(10);
             }
 
             long antes_bubble = System.nanoTime();
