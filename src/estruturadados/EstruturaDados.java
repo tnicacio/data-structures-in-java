@@ -5,6 +5,7 @@
  */
 package estruturadados;
 
+import java.util.Arrays;
 import ordenacao.TesteOrdenacao;
 
 /**
@@ -17,6 +18,11 @@ public class EstruturaDados {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       TesteOrdenacao.init(100,1000);
+       //TesteOrdenacao.init(100,1000);
+       int [] A = {1, 3, 6, 4, 1, 2};
+        System.out.println(Arrays.toString(A));
+        
+//        int [] res = Codility.solution(5, A);
+//        System.out.println(Arrays.toString(res));
     }
 }
