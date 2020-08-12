@@ -9,10 +9,19 @@ public class ArvoreBinariaBusca {
 	}
 
 	public NoArvoreBinaria busca(int v) {
-		return raiz;
+		return busca(this.raiz, v);
 	}
 
 	private NoArvoreBinaria busca(NoArvoreBinaria a, int v) {
+		if (a == null) {
+			return null;
+		}
+		if (v < a.getInfo()) {
+			return busca(a.getSae(), v);
+		}
+		if (v > a.getInfo()) {
+			return busca(a.getSad(), v);
+		}
 		return a;
 	}
 

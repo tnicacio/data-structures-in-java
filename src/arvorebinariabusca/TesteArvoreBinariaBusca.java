@@ -10,6 +10,9 @@ public class TesteArvoreBinariaBusca {
 		ab.insere(4);
 		ab.insere(3);
 		System.out.println(ab);
+		
+		System.out.println(ab.busca(2));
+		System.out.println(ab.busca(5));
 
 	}
 
