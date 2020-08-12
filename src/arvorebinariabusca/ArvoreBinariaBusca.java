@@ -17,23 +17,19 @@ public class ArvoreBinariaBusca {
 	}
 
 	public void insere(int v) {
-		this.raiz = insereAux(this.raiz, v);
-	}
-	
-	private NoArvoreBinaria insereAux(NoArvoreBinaria no, int valor) {
-		if (no == null) {
-			no = new NoArvoreBinaria(valor);
-		} else {
-			if (valor < no.getInfo()) {
-				no.setSae(insereAux(no.getSae(), valor));
-			} else {
-				no.setSad(insereAux(no.getSad(),valor));
-			}
-		}
-		return no;
+		this.raiz = insere(this.raiz, v);
 	}
 
 	private NoArvoreBinaria insere(NoArvoreBinaria a, int v) {
+		if (a == null) {
+			a = new NoArvoreBinaria(v);
+		} else {
+			if (v < a.getInfo()) {
+				a.setSae(insere(a.getSae(), v));
+			} else {
+				a.setSad(insere(a.getSad(),v));
+			}
+		}
 		return a;
 	}
 
