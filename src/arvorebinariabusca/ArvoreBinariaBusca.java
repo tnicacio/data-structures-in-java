@@ -57,26 +57,23 @@ public class ArvoreBinariaBusca {
 			a.setSad(retira(a.getSad(), v));
 			return a;
 		}
-		
 		if (a.getSae() == null && a.getSad() == null) {
 			return a = null;
 		}
-
 		if (a.getSae() == null) {
 			return a = a.getSad();
 		}
 		if (a.getSad() == null) {
 			return a = a.getSae();
 		}
-		
+
 		NoArvoreBinaria p = a.getSae();
-		while( p.getSad() != null) {
+		while (p.getSad() != null) {
 			p = p.getSad();
 		}
 		a.setInfo(p.getInfo());
 		p.setInfo(v);
 		a.setSae(retira(a.getSae(), v));
-
 		return a;
 	}
 
