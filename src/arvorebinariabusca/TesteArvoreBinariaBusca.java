@@ -13,6 +13,11 @@ public class TesteArvoreBinariaBusca {
 		
 		System.out.println(ab.busca(2));
 		System.out.println(ab.busca(5));
+		ab.retira(5);
+		System.out.println(ab);
+		ab.retira(3);
+		ab.retira(1);
+		System.out.println(ab);
 
 	}
 
