@@ -26,5 +26,10 @@ public class TestHashTable {
 	
 	System.out.println(th.get(6546));
 	
+	th.set("Creuzisneia", 1002, 6);
+	System.out.println(th.get(1002));
+	th.set("Walberto", 4444, 5.4f);
+	System.out.println(th);
+	
 	}
 }

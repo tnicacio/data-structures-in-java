@@ -39,6 +39,9 @@ public class TabelaHash {
 			p = new Aluno(nome, matricula, mediaGeral);
 			p.setProx(tabela[h]);
 			tabela[h] = p;
+		} else {
+			p.setNome(nome);
+			p.setMediaGeral(mediaGeral);
 		}
 	}
 
