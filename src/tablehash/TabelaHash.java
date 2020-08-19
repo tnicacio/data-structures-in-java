@@ -48,15 +48,23 @@ public class TabelaHash {
 	public void remove(int k) {
 		int h = hash(k);
 		Aluno p = tabela[h];
+		Aluno anterior = null;
 
 		while (p != null) {
 			if (p.getMatricula() == k) {
 				break;
 			}
+			anterior = p;
 			p = p.getProx();
 		}
 
-		if (p != null) {
+		if (p == null) {
+			return;
+		}
+
+		if (anterior != null) {
+			anterior.setProx(p.getProx());
+		} else {
 			tabela[h] = p.getProx();
 		}
 	}
@@ -73,5 +81,5 @@ public class TabelaHash {
 		}
 		return sb.toString();
 	}
-	
+
 }
